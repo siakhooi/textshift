@@ -1,4 +1,6 @@
 {
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "tests", "vitest.config.ts"],
     "compilerOptions": {
         "module": "Node16",
         "target": "ES2022",
