@@ -45,3 +45,6 @@ jobs:
         if: runner.os == 'Linux'
         run: xvfb-run -a npm run test:extension
 
+      - name: package
+        run: npm run vsix
+
