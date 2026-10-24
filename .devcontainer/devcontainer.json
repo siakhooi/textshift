@@ -9,9 +9,11 @@
     "vscode": {
       "extensions": [
         "lfm.vscode-makefile-term",
+        "ms-vscode.extension-test-runner",
         "yzhang.markdown-all-in-one",
         "kisstkondoros.vscode-codemetrics",
         "dbaeumer.vscode-eslint",
+        "yoavbls.pretty-ts-errors",
         "redhat.vscode-yaml",
         "esbenp.prettier-vscode"
       ]
