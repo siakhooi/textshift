@@ -6,6 +6,7 @@ install:
 test:
   npm run format
   npm run compile
+  npm run test:coverage
 build: test
   npm run vsix
 
