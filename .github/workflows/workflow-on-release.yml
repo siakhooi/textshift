@@ -15,3 +15,10 @@ jobs:
     uses: ./.github/workflows/deploy-github-release-assets.yml
     secrets:
       TOKEN_TO_UPLOAD_ASSETS: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
+
+  # marketplace:
+  #   needs: build
+  #   permissions:
+  #     contents: read
+  #     id-token: write
+  #   uses: ./.github/workflows/deploy-vscode-marketplace.yml

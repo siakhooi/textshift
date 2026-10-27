@@ -1,6 +1,7 @@
 {
   "name": "textshift",
   "displayName": "TextShift",
+  "publisher": "siakhooi",
   "description": "Text Processing Commands",
   "version": "0.0.1",
   "repository": {
