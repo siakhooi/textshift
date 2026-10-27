@@ -14,4 +14,3 @@ clean:
   rm -rf dist/ out/ *.vsix
 clean-all: clean
   rm -rf node_modules/
-
