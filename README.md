@@ -1,4 +1,11 @@
 # textshift
+![License](https://img.shields.io/github/license/siakhooi/textshift)](https://github.com/siakhooi/textshift/blob/main/LICENSE)
+[![Release](https://img.shields.io/github/v/release/siakhooi/textshift)](https://github.com/siakhooi/textshift/releases/latest)
+[![Build](https://img.shields.io/github/actions/workflow/status/siakhooi/textshift/ci.yaml?label=build)](https://github.com/siakhooi/textshift/actions/workflows/ci.yaml)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=bugs)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
+![count](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-textshift)
 
 VS Code extension with editor commands for common text transformations. Run them from the Command Palette on the current selection or document.
 
@@ -70,36 +77,3 @@ With [just](https://github.com/casey/just) installed, `just build` runs tests an
 - <https://sonarcloud.io/project/overview?id=siakhooi_textshift>
 - <https://qlty.sh/gh/siakhooi/projects/textshift>
 
-## Badges
-
-![License](https://img.shields.io/github/license/siakhooi/textshift?logo=github)
-[![Code Style](https://img.shields.io/badge/code%20style-prettier-blueviolet.svg)](https://prettier.io/)
-![GitHub last commit](https://img.shields.io/github/last-commit/siakhooi/textshift?logo=github)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/siakhooi/textshift?logo=github)
-![GitHub issues](https://img.shields.io/github/issues/siakhooi/textshift?logo=github)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/siakhooi/textshift?logo=github)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/siakhooi/textshift?logo=github)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/siakhooi/textshift?logo=github)
-![GitHub top language](https://img.shields.io/github/languages/top/siakhooi/textshift?logo=github)
-
-![Release](https://img.shields.io/badge/Release-VS%20Marketplace-purple)
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/siakhooi.textshift?color=0e7fc0&label=Marketplace&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=siakhooi.textshift)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/siakhooi.textshift?logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=siakhooi.textshift)
-
-![Quality-Qlty](https://img.shields.io/badge/Quality-Qlty-purple)
-[![Maintainability](https://qlty.sh/gh/siakhooi/projects/textshift/maintainability.svg)](https://qlty.sh/gh/siakhooi/projects/textshift)
-[![Code Coverage](https://qlty.sh/gh/siakhooi/projects/textshift/coverage.svg)](https://qlty.sh/gh/siakhooi/projects/textshift)
-
-![Quality-Sonar](https://img.shields.io/badge/Quality-SonarCloud-purple)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=bugs)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
-
-[![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
-![count](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-textshift)
