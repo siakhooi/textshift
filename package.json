@@ -20,7 +20,7 @@
     "commands": [
       {
         "command": "textshift.sortLinesAscending",
-        "title": "Sort Lines Ascending"
+        "title": "TextShift: Sort Lines Ascending"
       }
     ]
   },
