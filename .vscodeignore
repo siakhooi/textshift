@@ -3,6 +3,8 @@
 out/**
 node_modules/**
 src/**
+tests/**
+coverage/**
 .gitignore
 .yarnrc
 esbuild.js
@@ -12,3 +14,10 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+.github/**
+.devcontainer/**
+sonar-project.properties
+justfile
+vitest.config.ts
+.prettierrc.json
+package-lock.json
