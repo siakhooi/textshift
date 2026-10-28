@@ -1,10 +1,11 @@
 # textshift
-![License](https://img.shields.io/github/license/siakhooi/textshift)](https://github.com/siakhooi/textshift/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/siakhooi/textshift)](https://github.com/siakhooi/textshift/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/v/release/siakhooi/textshift)](https://github.com/siakhooi/textshift/releases/latest)
 [![Build](https://img.shields.io/github/actions/workflow/status/siakhooi/textshift/ci.yaml?label=build)](https://github.com/siakhooi/textshift/actions/workflows/ci.yaml)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=bugs)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
+[![Wise](https://img.shields.io/badge/Funding-Wise-33cb56.svg?logo=wise)](https://wise.com/pay/me/siakn3)
 ![count](https://hit-tztugwlsja-uc.a.run.app/?outputtype=badge&counter=ghmd-textshift)
 
 VS Code extension with editor commands for common text transformations. Run them from the Command Palette on the current selection or document.
