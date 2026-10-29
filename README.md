@@ -44,24 +44,6 @@ Sorts the lines in the current selection in ascending order (`textshift.sortLine
 
 Assign a keybinding in **Keyboard Shortcuts** if you use a command often. Search for `textshift` to find its command IDs.
 
-### Development
-
-Clone the repo, install dependencies, and press **F5** to launch an Extension Development Host:
-
-```bash
-git clone https://github.com/siakhooi/textshift.git
-cd textshift
-npm install
-```
-
-```bash
-npm run compile   # typecheck, lint, bundle
-npm test          # extension + unit tests
-npm run vsix      # package a .vsix locally
-```
-
-With [just](https://github.com/casey/just) installed, `just build` runs tests and produces a `.vsix`.
-
 ## Locations
 
 ### Source Code
