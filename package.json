@@ -4,6 +4,7 @@
   "publisher": "siakhooi",
   "description": "Text Processing Commands",
   "version": "0.1.0",
+  "icon": "images/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/siakhooi/textshift.git"
