@@ -1,6 +1,6 @@
 {
-  "name": "Node.js 24 Development Dev Container",
-  "image": "siakhooi/devcontainer:nodejs24",
+  "name": "Node.js 26 Development Dev Container",
+  "image": "siakhooi/devcontainer:nodejs26",
   "remoteUser": "maui",
   "containerUser": "maui",
   "updateRemoteUserUID": true,
