@@ -21,3 +21,5 @@ justfile
 vitest.config.ts
 .prettierrc.json
 package-lock.json
+scripts/
+release.env
