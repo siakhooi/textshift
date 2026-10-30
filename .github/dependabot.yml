@@ -13,7 +13,7 @@ updates:
     assignees:
       - 'siakhooi'
     ignore:
-      - depenency-name: "@types/vscode"
+      - dependency-name: "@types/vscode"
         update-types:
           - version-update:semver-minor
           - version-update:semver-major
