@@ -3,7 +3,8 @@
   "displayName": "TextShift",
   "publisher": "siakhooi",
   "description": "Text Processing Commands",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "icon": "images/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/siakhooi/textshift.git"
@@ -13,6 +14,11 @@
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "text processing",
+    "text transformation",
+    "sort lines"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",

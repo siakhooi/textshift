@@ -1,7 +1,7 @@
 # textshift
 [![License](https://img.shields.io/github/license/siakhooi/textshift)](https://github.com/siakhooi/textshift/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/v/release/siakhooi/textshift)](https://github.com/siakhooi/textshift/releases/latest)
-[![Build](https://img.shields.io/github/actions/workflow/status/siakhooi/textshift/ci.yaml?label=build)](https://github.com/siakhooi/textshift/actions/workflows/ci.yaml)
+[![Build](https://img.shields.io/github/actions/workflow/status/siakhooi/textshift/workflow-on-pull-request.yml?label=build)](https://github.com/siakhooi/textshift/actions/workflows/workflow-on-pull-request.yml)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=bugs)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=siakhooi_textshift&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=siakhooi_textshift)
