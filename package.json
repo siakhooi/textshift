@@ -3,14 +3,14 @@
   "displayName": "TextShift",
   "publisher": "siakhooi",
   "description": "Text Processing Commands",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/siakhooi/textshift.git"
   },
   "engines": {
-    "vscode": "^1.140.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
@@ -26,7 +26,8 @@
     "commands": [
       {
         "command": "textshift.sortLinesAscending",
-        "title": "TextShift: Sort Lines Ascending"
+        "category": "TextShift",
+        "title": "Sort Lines Ascending"
       }
     ]
   },
@@ -53,7 +54,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "26.x",
-    "@types/vscode": "^1.140.0",
+    "@types/vscode": "^1.85.0",
     "@vitest/coverage-v8": "^5.0.5",
     "@vscode/test-cli": "^0.0.15",
     "@vscode/test-electron": "^3.0.0",
