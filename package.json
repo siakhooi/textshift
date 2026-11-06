@@ -18,6 +18,8 @@
   "keywords": [
     "text processing",
     "text transformation",
+    "prefix lines",
+    "suffix lines",
     "sort lines"
   ],
   "activationEvents": [],
@@ -33,6 +35,16 @@
         "command": "textshift.sortLinesDescending",
         "category": "TextShift",
         "title": "Sort Lines Descending"
+      },
+      {
+        "command": "textshift.prefixLines",
+        "category": "TextShift",
+        "title": "Prefix Lines with ..."
+      },
+      {
+        "command": "textshift.suffixLines",
+        "category": "TextShift",
+        "title": "Suffix Lines with ..."
       }
     ]
   },
