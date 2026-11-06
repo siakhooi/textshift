@@ -58,7 +58,7 @@ suite("Extension Test Suite", () => {
     });
     const editor = await vscode.window.showTextDocument(document);
     const start = document.lineAt(1).range.start;
-    const end = document.lineAt(2).range.end;
+    const end = document.lineAt(3).range.end;
     editor.selection = new vscode.Selection(start, end);
 
     await vscode.commands.executeCommand("textshift.sortLinesAscending");
@@ -80,7 +80,7 @@ suite("Extension Test Suite", () => {
     });
     const editor = await vscode.window.showTextDocument(document);
     const start = document.lineAt(1).range.start;
-    const end = document.lineAt(2).range.end;
+    const end = document.lineAt(3).range.end;
     editor.selection = new vscode.Selection(start, end);
 
     await vscode.commands.executeCommand("textshift.sortLinesDescending");

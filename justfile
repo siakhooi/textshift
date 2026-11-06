@@ -8,6 +8,8 @@ test:
   npm run format
   npm run compile
   npm run test:coverage
+test-ext:
+  npm run test:extension
 build: test
   npm run vsix
 
