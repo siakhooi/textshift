@@ -28,6 +28,11 @@
         "command": "textshift.sortLinesAscending",
         "category": "TextShift",
         "title": "Sort Lines Ascending"
+      },
+      {
+        "command": "textshift.sortLinesDescending",
+        "category": "TextShift",
+        "title": "Sort Lines Descending"
       }
     ]
   },

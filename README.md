@@ -36,11 +36,15 @@ Commands appear in the Command Palette under the **TextShift** group (prefix `te
 
 Sorts the lines in the current selection in ascending order (`textshift.sortLinesAscending`). If nothing is selected, the command does not change the document.
 
+### Sort Lines Descending
+
+Sorts the lines in the current selection in descending order (`textshift.sortLinesDescending`). If nothing is selected, the command does not change the document.
+
 ## Usage
 
 1. Select the lines you want to sort.
 2. Open the Command Palette (`F1` or `Ctrl+Shift+P` / `Cmd+Shift+P`).
-3. Run **TextShift: Sort Lines Ascending**.
+3. Run **TextShift: Sort Lines Ascending** or **TextShift: Sort Lines Descending**.
 
 Assign a keybinding in **Keyboard Shortcuts** if you use a command often. Search for `textshift` to find its command IDs.
 
