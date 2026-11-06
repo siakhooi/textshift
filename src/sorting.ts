@@ -29,7 +29,7 @@ async function sortLinesDescending() {
   const selection = editor.selection;
   const text = document.getText(selection);
   const lines = text.split("\n");
-  const sortedLines = lines.sort((a,b)=>b.localCompare(a));
+  const sortedLines = lines.sort((a, b) => b.localeCompare(a));
   const sortedText = sortedLines.join("\n");
   await editor.edit((editBuilder) => {
     editBuilder.replace(selection, sortedText);

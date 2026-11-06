@@ -40,7 +40,7 @@ vi.mock("vscode", () => ({
   },
 }));
 
-import { sortLinesAscending } from "../src/sorting";
+import { sortLinesAscending, sortLinesDescending } from "../src/sorting";
 
 describe("sortLinesAscending", () => {
   beforeEach(() => {
@@ -83,6 +83,86 @@ describe("sortLinesAscending", () => {
 
   it("shows a message when there is no active editor", async () => {
     await sortLinesAscending();
+
+    expect(vscodeMocks.showInformationMessage).toHaveBeenCalledWith(
+      "No active text editor found",
+    );
+    expect(vscodeMocks.edit).not.toHaveBeenCalled();
+  });
+});
+
+describe("sortLinesDescending", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vscodeMocks.setActiveTextEditor(null);
+  });
+
+  it("sorts selected lines descending and replaces the selection", async () => {
+    const selection = { start: {}, end: {} };
+    vscodeMocks.getText.mockReturnValue("zebra\napple\nmango");
+    vscodeMocks.setActiveTextEditor({
+      document: { getText: vscodeMocks.getText },
+      selection,
+      edit: vscodeMocks.edit,
+    });
+
+    await sortLinesDescending();
+
+    expect(vscodeMocks.getText).toHaveBeenCalledWith(selection);
+    expect(vscodeMocks.replace).toHaveBeenCalledWith(
+      selection,
+      "zebra\nmango\napple",
+    );
+    expect(vscodeMocks.showInformationMessage).not.toHaveBeenCalled();
+  });
+
+  it("sorts a single line without changing content", async () => {
+    const selection = { start: {}, end: {} };
+    vscodeMocks.getText.mockReturnValue("only");
+    vscodeMocks.setActiveTextEditor({
+      document: { getText: vscodeMocks.getText },
+      selection,
+      edit: vscodeMocks.edit,
+    });
+
+    await sortLinesDescending();
+
+    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "only");
+  });
+
+  it("keeps duplicate lines together after sorting", async () => {
+    const selection = { start: {}, end: {} };
+    vscodeMocks.getText.mockReturnValue("b\na\nb\nc");
+    vscodeMocks.setActiveTextEditor({
+      document: { getText: vscodeMocks.getText },
+      selection,
+      edit: vscodeMocks.edit,
+    });
+
+    await sortLinesDescending();
+
+    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "c\nb\nb\na");
+  });
+
+  it("sorts already-descending lines without rearranging them", async () => {
+    const selection = { start: {}, end: {} };
+    vscodeMocks.getText.mockReturnValue("zebra\nmango\napple");
+    vscodeMocks.setActiveTextEditor({
+      document: { getText: vscodeMocks.getText },
+      selection,
+      edit: vscodeMocks.edit,
+    });
+
+    await sortLinesDescending();
+
+    expect(vscodeMocks.replace).toHaveBeenCalledWith(
+      selection,
+      "zebra\nmango\napple",
+    );
+  });
+
+  it("shows a message when there is no active editor", async () => {
+    await sortLinesDescending();
 
     expect(vscodeMocks.showInformationMessage).toHaveBeenCalledWith(
       "No active text editor found",
