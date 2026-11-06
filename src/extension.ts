@@ -9,8 +9,6 @@ export function activate(context: vscode.ExtensionContext) {
       "textshift.sortLinesAscending",
       sortLinesAscending,
     ),
-  );
-  context.subscriptions.push(
     vscode.commands.registerCommand(
       "textshift.sortLinesDescending",
       sortLinesDescending,
