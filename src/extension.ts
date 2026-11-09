@@ -14,13 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
       "textshift.sortLinesDescending",
       sortLinesDescending,
     ),
-    vscode.commands.registerCommand(
-      "textshift.prefixLines",
-      prefixLines,
-    ),
-    vscode.commands.registerCommand(
-      "textshift.suffixLines",
-      suffixLines,
-    ),
+    vscode.commands.registerCommand("textshift.prefixLines", prefixLines),
+    vscode.commands.registerCommand("textshift.suffixLines", suffixLines),
   );
 }
