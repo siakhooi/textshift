@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 
 const MAX_PREFIX_LENGTH = 20;
+const MAX_SUFFIX_LENGTH = 20;
 
 async function prefixLines() {
   const editor = vscode.window.activeTextEditor;
