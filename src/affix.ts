@@ -32,7 +32,7 @@ async function prefixLines() {
   const affixedLines = lines.map((line) => `${prefix}${line}`);
   const affixedText = affixedLines.join("\n");
   await editor.edit((editBuilder) => {
-    editBuilder.replace(selection, sortedText);
+    editBuilder.replace(selection, affixedText);
   });
 }
 
@@ -64,7 +64,7 @@ async function suffixLines() {
   const affixedLines = lines.map((line) => `${line}${suffix}`);
   const affixedText = affixedLines.join("\n");
   await editor.edit((editBuilder) => {
-    editBuilder.replace(selection, sortedText);
+    editBuilder.replace(selection, affixedText);
   });
 }
 

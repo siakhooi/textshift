@@ -3,6 +3,15 @@ default:
 
 install:
   npm install
+install-termux:
+  npm install --ignore-scripts
+test-termux:
+  just set-version
+  npm run format
+  npm run lint
+  npm run compile
+  npm run test:coverage
+
 test:
   just set-version
   npm run format
