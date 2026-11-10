@@ -29,8 +29,8 @@ async function prefixLines() {
   const selection = editor.selection;
   const text = document.getText(selection);
   const lines = text.split("\n");
-  const sortedLines = lines.map((line) => `${prefix}${line}`);
-  const sortedText = sortedLines.join("\n");
+  const affixedLines = lines.map((line) => `${prefix}${line}`);
+  const affixedText = affixedLines.join("\n");
   await editor.edit((editBuilder) => {
     editBuilder.replace(selection, sortedText);
   });
@@ -61,8 +61,8 @@ async function suffixLines() {
   const selection = editor.selection;
   const text = document.getText(selection);
   const lines = text.split("\n");
-  const sortedLines = lines.map((line) => `${line}${suffix}`);
-  const sortedText = sortedLines.join("\n");
+  const affixedLines = lines.map((line) => `${line}${suffix}`);
+  const affixedText = affixedLines.join("\n");
   await editor.edit((editBuilder) => {
     editBuilder.replace(selection, sortedText);
   });
