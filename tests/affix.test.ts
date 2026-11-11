@@ -84,31 +84,32 @@ describe("prefixLines", () => {
     expect(vscodeMocks.showInformationMessage).not.toHaveBeenCalled();
   });
 
-  it("prefixes a single line", async () => {
-    const selection = setEditor("only");
-    vscodeMocks.showInputBox.mockResolvedValue("> ");
+  it.each([
+    {
+      case: "a single line",
+      input: "only",
+      affix: "> ",
+      expected: "> only",
+    },
+    {
+      case: "empty lines too",
+      input: "a\n\nb",
+      affix: "-",
+      expected: "-a\n-\n-b",
+    },
+    {
+      case: "empty prefix unchanged",
+      input: "a\nb",
+      affix: "",
+      expected: "a\nb",
+    },
+  ])("prefixes $case", async ({ input, affix, expected }) => {
+    const selection = setEditor(input);
+    vscodeMocks.showInputBox.mockResolvedValue(affix);
 
     await prefixLines();
 
-    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "> only");
-  });
-
-  it("prefixes empty lines too", async () => {
-    const selection = setEditor("a\n\nb");
-    vscodeMocks.showInputBox.mockResolvedValue("-");
-
-    await prefixLines();
-
-    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "-a\n-\n-b");
-  });
-
-  it("leaves lines unchanged when the prefix is an empty string", async () => {
-    const selection = setEditor("a\nb");
-    vscodeMocks.showInputBox.mockResolvedValue("");
-
-    await prefixLines();
-
-    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "a\nb");
+    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, expected);
   });
 
   it("does nothing when the input box is cancelled", async () => {
@@ -181,31 +182,32 @@ describe("suffixLines", () => {
     expect(vscodeMocks.showInformationMessage).not.toHaveBeenCalled();
   });
 
-  it("suffixes a single line", async () => {
-    const selection = setEditor("only");
-    vscodeMocks.showInputBox.mockResolvedValue(" <END>");
+  it.each([
+    {
+      case: "a single line",
+      input: "only",
+      affix: " <END>",
+      expected: "only <END>",
+    },
+    {
+      case: "empty lines too",
+      input: "a\n\nb",
+      affix: ",",
+      expected: "a,\n,\nb,",
+    },
+    {
+      case: "empty suffix unchanged",
+      input: "a\nb",
+      affix: "",
+      expected: "a\nb",
+    },
+  ])("suffixes $case", async ({ input, affix, expected }) => {
+    const selection = setEditor(input);
+    vscodeMocks.showInputBox.mockResolvedValue(affix);
 
     await suffixLines();
 
-    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "only <END>");
-  });
-
-  it("suffixes empty lines too", async () => {
-    const selection = setEditor("a\n\nb");
-    vscodeMocks.showInputBox.mockResolvedValue(",");
-
-    await suffixLines();
-
-    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "a,\n,\nb,");
-  });
-
-  it("leaves lines unchanged when the suffix is an empty string", async () => {
-    const selection = setEditor("a\nb");
-    vscodeMocks.showInputBox.mockResolvedValue("");
-
-    await suffixLines();
-
-    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, "a\nb");
+    expect(vscodeMocks.replace).toHaveBeenCalledWith(selection, expected);
   });
 
   it("does nothing when the input box is cancelled", async () => {
