@@ -3,23 +3,19 @@ default:
 
 install:
   npm install
-install-termux:
+install-no-scripts:
   npm install --ignore-scripts
-test-termux:
+
+test:
   just set-version
   npm run format
   npm run lint
   npm run compile
   npm run test:coverage
 
-test:
-  just set-version
-  npm run format
-  npm run compile
-  npm run test:coverage
 test-ext:
   npm run test:extension
-build: test
+build: test test-ext
   npm run vsix
 
 clean:
