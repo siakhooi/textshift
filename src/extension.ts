@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import { sortLinesAscending, sortLinesDescending } from "./sorting";
+import { prefixLines, suffixLines } from "./affix";
 
 export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "textshift" is now active!');
@@ -13,5 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
       "textshift.sortLinesDescending",
       sortLinesDescending,
     ),
+    vscode.commands.registerCommand("textshift.prefixLines", prefixLines),
+    vscode.commands.registerCommand("textshift.suffixLines", suffixLines),
   );
 }
