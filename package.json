@@ -3,7 +3,7 @@
   "displayName": "TextShift",
   "publisher": "siakhooi",
   "description": "Text Processing Commands",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
