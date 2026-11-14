@@ -40,11 +40,21 @@ Sorts the lines in the current selection in ascending order (`textshift.sortLine
 
 Sorts the lines in the current selection in descending order (`textshift.sortLinesDescending`). If nothing is selected, the command does not change the document.
 
+### Prefix Lines with ...
+
+Adds the prefix you enter to each line in the current selection (`textshift.prefixLines`). VS Code prompts for the prefix (up to 20 characters; an empty value is allowed). Dismissing the prompt leaves the document unchanged.
+
+### Suffix Lines with ...
+
+Adds the suffix you enter to each line in the current selection (`textshift.suffixLines`). VS Code prompts for the suffix (up to 20 characters; an empty value is allowed). Dismissing the prompt leaves the document unchanged.
+
 ## Usage
 
-1. Select the lines you want to sort.
+1. Select the lines you want to transform.
 2. Open the Command Palette (`F1` or `Ctrl+Shift+P` / `Cmd+Shift+P`).
-3. Run **TextShift: Sort Lines Ascending** or **TextShift: Sort Lines Descending**.
+3. Run a **TextShift** command, for example **Sort Lines Ascending**, **Sort Lines Descending**, **Prefix Lines with ...**, or **Suffix Lines with ...**.
+
+For prefix and suffix, enter the text in the input box when prompted and confirm to apply it to every selected line.
 
 Assign a keybinding in **Keyboard Shortcuts** if you use a command often. Search for `textshift` to find its command IDs.
 
