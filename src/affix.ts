@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { getEol } from "./document_eol";
 
 const MAX_PREFIX_LENGTH = 20;
 const MAX_SUFFIX_LENGTH = 20;
@@ -26,11 +27,12 @@ async function prefixLines() {
   }
 
   const document = editor.document;
+  const eol = getEol(document);
   const selection = editor.selection;
   const text = document.getText(selection);
-  const lines = text.split("\n");
+  const lines = text.split(/\r\n|\r|\n/);
   const affixedLines = lines.map((line) => `${prefix}${line}`);
-  const affixedText = affixedLines.join("\n");
+  const affixedText = affixedLines.join(eol);
   await editor.edit((editBuilder) => {
     editBuilder.replace(selection, affixedText);
   });

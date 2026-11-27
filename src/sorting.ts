@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { getEol } from "./document_eol";
 
 async function sortLinesAscending() {
   const editor = vscode.window.activeTextEditor;
@@ -8,11 +9,12 @@ async function sortLinesAscending() {
   }
 
   const document = editor.document;
+  const eol = getEol(document);
   const selection = editor.selection;
   const text = document.getText(selection);
-  const lines = text.split("\n");
+  const lines = text.split(/\r\n|\n|\r/);
   const sortedLines = lines.sort();
-  const sortedText = sortedLines.join("\n");
+  const sortedText = sortedLines.join(eol);
   await editor.edit((editBuilder) => {
     editBuilder.replace(selection, sortedText);
   });
