@@ -38,6 +38,10 @@ vi.mock("vscode", () => ({
     },
     showInformationMessage: vscodeMocks.showInformationMessage,
   },
+  EndOfLine: {
+    LF: 1,
+    CRLF: 2,
+  },
 }));
 
 import { sortLinesAscending, sortLinesDescending } from "../src/sorting";

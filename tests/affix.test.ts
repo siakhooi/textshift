@@ -41,6 +41,10 @@ vi.mock("vscode", () => ({
     showInformationMessage: vscodeMocks.showInformationMessage,
     showInputBox: vscodeMocks.showInputBox,
   },
+  EndOfLine: {
+    LF: 1,
+    CRLF: 2,
+  },
 }));
 
 import { prefixLines, suffixLines } from "../src/affix";
